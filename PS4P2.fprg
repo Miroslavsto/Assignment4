@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS4P2"/>
+        <attribute name="authors" value="miros"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-07 02:45:06 PM"/>
+        <attribute name="created" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDI6Mzc6MjkgUE07Mjg1Mw=="/>
+        <attribute name="edited" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDI6NDU6MDYgUE07MTsyOTU1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="purchasePrice" type="Real" array="False" size=""/>
+            <declare name="currentPrice" type="Real" array="False" size=""/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <declare name="stockValueChange" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the purchase Price per Stock&quot;" newline="True"/>
+            <input variable="purchasePrice"/>
+            <output expression="&quot;Enter the Current stock Price per share&quot;" newline="True"/>
+            <input variable="currentPrice"/>
+            <output expression="&quot;Enter the Quantity of Stock&quot;" newline="True"/>
+            <input variable="quantity"/>
+            <assign variable="stockValueChange" expression="(currentPrice - purchasePrice) * quantity"/>
+            <if expression="stockValueChange &gt; 0">
+                <then>
+                    <output expression="&quot;Profit $&quot; &amp; stockValueChange" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Loss $&quot; &amp; stockValueChange" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

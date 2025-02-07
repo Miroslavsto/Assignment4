@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS4P5"/>
+        <attribute name="authors" value="miros"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-07 03:09:00 PM"/>
+        <attribute name="created" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDM6MDE6MTcgUE07Mjg0Mg=="/>
+        <attribute name="edited" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDM6MDk6MDAgUE07MTsyOTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="fixedCosts" type="Real" array="False" size=""/>
+            <declare name="pricePerUnit" type="Real" array="False" size=""/>
+            <declare name="costPerUnit" type="Real" array="False" size=""/>
+            <declare name="breakEvenPoint" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the fixed costs:&quot;" newline="True"/>
+            <input variable="fixedCosts"/>
+            <output expression="&quot;Enter the price per unit:&quot;" newline="True"/>
+            <input variable="pricePerUnit"/>
+            <output expression="&quot;Enter the cost per unit:&quot;" newline="True"/>
+            <input variable="costPerUnit"/>
+            <assign variable="breakEvenPoint" expression="fixedCosts / (pricePerUnit - costPerUnit)"/>
+            <output expression="&quot;The break-even point is &quot; &amp; breakeEvenPoint &amp; &quot; units.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="PS4P3"/>
+        <attribute name="authors" value="miros"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-07 02:55:38 PM"/>
+        <attribute name="created" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDI6NDU6MjIgUE07Mjg0NQ=="/>
+        <attribute name="edited" value="bWlyb3M7TEFQVE9QLTZUNkI5NVM2OzIwMjUtMDItMDc7MDI6NTU6MzggUE07MTsyOTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mealTotal" type="Real" array="False" size=""/>
+            <declare name="tipAmount" type="Real" array="True" size="3"/>
+            <declare name="totalWithTip" type="Real" array="False" size=""/>
+            <declare name="tipPercentages" type="Integer" array="True" size="3"/>
+            <assign variable="tipPercentages[0]" expression="15"/>
+            <assign variable="tipPercentages[1]" expression="18"/>
+            <assign variable="tipPercentages[2]" expression="20"/>
+            <declare name="tipValue" type="Real" array="True" size="3"/>
+            <output expression="&quot;Total Meal is&quot;" newline="True"/>
+            <input variable="mealTotal"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <assign variable="tipAmount[i]" expression="mealTotal * (tipPercentages[i]/100)"/>
+                <output expression="&quot;The total amount with &quot; &amp;tipPercentages[i] &amp;&quot;tips is:&quot; &amp;(mealTotal + tipAmount[i])" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
