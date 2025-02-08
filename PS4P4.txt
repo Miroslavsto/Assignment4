@@ -1,0 +1,7 @@
+
+first_name = input("Enter your first name: ")
+steps_walked = int(input("Enter the number of steps walked in a day: "))
+
+calories_burned = steps_walked * 0.25
+
+print(f"\n{first_name}, you burned {calories_burned:.2f} calories today.")

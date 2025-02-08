@@ -1,0 +1,15 @@
+
+meal_total = float(input("Enter the total for the meal: "))
+
+
+tip_rates = [0.15, 0.18, 0.20]
+
+
+ tip_rate in tip_rates:
+ tip = meal_total * tip_rate
+ total_with_tip = meal_total + tip
+
+ print(f"\nWith {int(tip_rate * 100)}% Tip:")
+ print(f"Total:                  {meal_total:.2f}")
+ print(f"Tip:                       {tip:.2f}")
+ print(f"Total with Tip:    {total_with_tip:.2f}\n")

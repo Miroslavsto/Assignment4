@@ -1,0 +1,13 @@
+
+purchase_price = float(input("Enter the purchase price per share: $"))
+current_price = float(input("Enter the current stock price: $"))
+quantity = int(input("Enter the quantity of stocks: "))
+
+value_change = (current_price - purchase_price) * quantity
+
+if value_change > 0:
+    print(f"The value of your stock has increased by: ${value_change:.2f}")
+elif value_change < 0:
+    print(f"The value of your stock has decreased by: ${abs(value_change):.2f}")
+else:
+    print("The value of your stock has not changed.")

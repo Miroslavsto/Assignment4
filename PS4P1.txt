@@ -1,0 +1,14 @@
+
+exam1_score = float(input("Enter the score for the first exam (0-100): "))
+exam2_score = float(input("Enter the score for the second exam (0-100): "))
+
+
+exam1_weight = 0.60
+exam2_weight = 0.40
+
+
+total_score = (exam1_score * exam1_weight) + (exam2_score * exam2_weight)
+
+
+print(f"The total score is: {total_score:.2f}")
+
